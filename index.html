@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadHarvest. — Préinscription BETA</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+</head>
+
+    <body>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="minimal-header">
+            <div class="brand">
+                <span class="logo-text">LeadHarvest.</span>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="minimal-main">
+
+            <!-- Hero / Lead capture Section -->
+            <section class="hero-section" id="heroSection">
+                <h1 class="hero-title">Collectez des prospects locaux — simplement.</h1>
+                <p class="hero-sub">Inscrivez-vous gratuitement pour être informé du lancement de la BETA et accéder en priorité.</p>
+
+                <form id="leadCaptureForm" class="lead-capture" novalidate>
+                    <label for="leadEmail" class="visually-hidden">Votre adresse e‑mail</label>
+                    <div class="input-group">
+                        <input type="email" id="leadEmail" name="email" placeholder="Votre adresse e‑mail (ex : jean@exemple.com)" required autocomplete="email" aria-required="true">
+                    </div>
+                    <div style="display:flex; gap:1rem; align-items:center;">
+                        <button type="submit" class="cta-primary" aria-label="Je m'inscris à la BETA">Je m'inscris à la BETA</button>
+                        <div id="leadStatus" aria-live="polite" class="lead-status"></div>
+                    </div>
+                    <div class="lead-capture-note">Nous n'enverrons pas de spam. Vos données servent uniquement à la BETA. Annulation possible à tout moment.</div>
+                </form>
+
+            </section>
+
+        </main>
+
+        <footer class="minimal-footer">
+            <p>&copy; 2026 LeadHarvest.</p>
+        </footer>
+    </div>
+
+    <script src="env-config.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

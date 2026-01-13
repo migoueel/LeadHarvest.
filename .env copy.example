@@ -1,0 +1,6 @@
+# Example .env for LeadHarvest
+# Copy this file to .env and fill values, then run:
+#   node scripts/generate-env.js
+
+GOOGLE_FORM_ACTION="https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse"
+GOOGLE_FORM_EMAIL_ENTRY=entry.1234567890
