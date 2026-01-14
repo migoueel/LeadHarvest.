@@ -3,24 +3,31 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Merci — LeadHarvest. BETA</title>
+  <title data-i18n="thankyouPageTitle">Merci — LeadHarvest. BETA</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="app-container">
     <header class="minimal-header">
       <div class="brand"><span class="logo-text">LeadHarvest.</span></div>
+      <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn" data-lang="fr">FR</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
     </header>
 
     <main class="minimal-main" style="text-align:center; padding-top:4rem;">
-      <h1 class="hero-title">Merci — vous êtes inscrit(e) !</h1>
-      <p style="margin-top:1rem; color:var(--text-secondary);">Nous vous enverrons un e‑mail de confirmation. Pour nous indiquer que vous souhaitez rejoindre le programme payant anticipé, répondez simplement à ce futur e‑mail avec le mot <strong>BETA</strong>.</p>
-      <p style="margin-top:1.5rem;"><a href="index.html" class="btn-text">Retour au site</a></p>
+      <h1 class="hero-title" data-i18n="thankYouTitle">Merci — vous êtes inscrit(e) !</h1>
+      <p style="margin-top:1rem; color:var(--text-secondary);" data-i18n="thankYouDesc">Nous vous enverrons un e‑mail de confirmation. Vous serez bientôt recontactés (n'oubliez pas de consulter vos spams !).</p>
+      <p style="margin-top:1.5rem;"><a href="index.html" class="btn-text" data-i18n="backToSite">Retour au site</a></p>
     </main>
 
     <footer class="minimal-footer">
       <p>&copy; 2026 LeadHarvest.</p>
     </footer>
   </div>
+</div>
+  <script src="env-config.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>

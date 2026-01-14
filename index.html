@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LeadHarvest. — Préinscription BETA</title>
+    <title data-i18n="pageTitle">LeadHarvest. — Préinscription BETA</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,10 @@
             <div class="brand">
                 <span class="logo-text">LeadHarvest.</span>
             </div>
+            <div class="lang-switcher" id="langSwitcher" aria-hidden="false">
+                <button class="lang-btn" data-lang="fr">FR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
         </header>
 
         <!-- Main Content -->
@@ -27,19 +31,33 @@
 
             <!-- Hero / Lead capture Section -->
             <section class="hero-section" id="heroSection">
-                <h1 class="hero-title">Collectez des prospects locaux — simplement.</h1>
-                <p class="hero-sub">Inscrivez-vous gratuitement pour être informé du lancement de la BETA et accéder en priorité.</p>
+                <h1 class="hero-title" data-i18n="heroTitle">Collectez des prospects locaux — simplement.</h1>
+                <p class="hero-sub" data-i18n="heroSub">Inscrivez-vous gratuitement pour être informé du lancement de la BETA et accéder en priorité.</p>
 
-                <form id="leadCaptureForm" class="lead-capture" novalidate>
-                    <label for="leadEmail" class="visually-hidden">Votre adresse e‑mail</label>
+                <form id="leadCaptureForm" class="lead-capture">
                     <div class="input-group">
-                        <input type="email" id="leadEmail" name="email" placeholder="Votre adresse e‑mail (ex : jean@exemple.com)" required autocomplete="email" aria-required="true">
+                        <label for="leadEmail" data-i18n="emailLabel">Votre adresse e‑mail :</label>
+                        <input type="email" id="leadEmail" name="email" placeholder="Ex : jean@exemple.com" data-i18n-placeholder="emailPlaceholder" required autocomplete="email" aria-required="true">
                     </div>
+
+                    <div class="input-group">
+                        <label for="businessType" data-i18n="businessLabel">Pour quel type de business avez-vous besoin de ces leads ?</label>
+                        <input type="text" id="businessType" name="business_type" placeholder="Ex : Vente de logiciels aux cliniques, Marketing pour un labo, Recrutement médical..." data-i18n-placeholder="businessPlaceholder" autocomplete="organization">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="valuableData" data-i18n="valuableLabel">Quelle est la donnée la plus précieuse que vous voulez avoir en plus des données actuelles ?</label>
+                        <input type="text" id="valuableData" name="valuable_data" placeholder="Ex : Nom du gérant, Mail, Profil linkedin associés, Taille de l'établissement..." data-i18n-placeholder="valuablePlaceholder">
+                    </div>
+
                     <div style="display:flex; gap:1rem; align-items:center;">
-                        <button type="submit" class="cta-primary" aria-label="Je m'inscris à la BETA">Je m'inscris à la BETA</button>
+                        <button type="submit" class="cta-primary" aria-label="Je m'inscris à la BETA" data-i18n="ctaPrimary">Je m'inscris à la BETA</button>
                         <div id="leadStatus" aria-live="polite" class="lead-status"></div>
                     </div>
-                    <div class="lead-capture-note">Nous n'enverrons pas de spam. Vos données servent uniquement à la BETA. Annulation possible à tout moment.</div>
+
+                    <div class="lead-capture-note" data-i18n="leadNote">Nous n'enverrons pas de spam. Vos données servent uniquement à la BETA. Annulation possible à tout moment.</div>
+
+                    <!-- <p class="feedback-thanks">Merci ! Votre feedback nous aide à construire l'outil le plus adapté.<br>L'équipe de LeadHarvest.</p> -->
                 </form>
 
             </section>

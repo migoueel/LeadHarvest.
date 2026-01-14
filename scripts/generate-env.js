@@ -36,7 +36,9 @@ const vars = parseEnv(content);
 
 const envObj = {
   GOOGLE_FORM_ACTION: vars.GOOGLE_FORM_ACTION || '',
-  GOOGLE_FORM_EMAIL_ENTRY: vars.GOOGLE_FORM_EMAIL_ENTRY || ''
+  GOOGLE_FORM_EMAIL_ENTRY: vars.GOOGLE_FORM_EMAIL_ENTRY || '',
+  GOOGLE_FORM_BUSINESS_ENTRY: vars.GOOGLE_FORM_BUSINESS_ENTRY || '',
+  GOOGLE_FORM_VALUABLE_ENTRY: vars.GOOGLE_FORM_VALUABLE_ENTRY || ''
 };
 
 const out = `// Generated file — do not edit (run scripts/generate-env.js)
